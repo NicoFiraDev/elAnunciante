@@ -1,0 +1,101 @@
+/*------------COLORS-----------*/
+
+/*
+LIGHTGREEN: #96d2b3
+DARKGREEN: #005431
+RED: #ed1c24
+*/
+
+/*----------------------------*/
+/*GENERAL*/
+/*----------------------------*/
+@font-face {
+	font-family: "harvestital";
+	src: url("../../resources/fonts/harvestitalregular.ttf") format("truetype");
+}
+
+/*--------------------------- */
+/* BODY */
+/*--------------------------- */
+
+/* Header */
+.header {
+  background-color: #96d2b3;
+  max-height: 150px;
+  border-bottom: #ed1c24;
+}
+
+.header__name,
+.header__name--sm {
+  font-family: 'harvestital';
+  color: #ed1c24;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px #ccc;
+}
+
+.header__logo {
+  max-height: 150px;
+  height: auto;
+	z-index: 1;
+}
+
+/* Navigation */
+
+.nav__info a.text-secondary:hover,
+.nav__social a.text-secondary:hover {
+    color: #fff!important;
+}
+
+.nav__info a i {
+  font-size: 1.3rem;
+}
+
+.nav__social a i {
+  font-size: 1.5rem;
+}
+
+/* News Section */
+
+#carouselArticle,
+.carousel-inner,
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  width: 90%;
+  left: 5%;
+  right: unset;
+  /* padding: 1rem;
+  text-align: justify; */
+}
+
+#carouselArticle .carousel-item:after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.4);
+}
+
+.article__img--sm {
+  width: 40%;
+  max-width: 300px;
+  min-width: 200px;
+  height: 100%;
+  max-height: 300px;
+  min-height: 200px;
+}
+
+.article__text--sm {
+  width: 60%;
+}
+
+.ad-img {
+  max-width: 100%;
+  max-height: 350px;
+}
