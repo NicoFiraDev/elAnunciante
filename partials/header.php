@@ -54,29 +54,29 @@
       <div class="container-fluid bg-dark shadow" style="border-top: 5px solid #ed1c24;">
         <div class="row">
           <div class="col-sm-12 mx-auto">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark " itemscope itemtype="https://schema.org/SiteNavigationElement">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav navbar-dark bg-dark mx-auto">
-                  <a class="nav-item nav-link mx-2" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Home <span class="sr-only">(current)</span></a>
                   <!-- <a class="nav-item nav-link mx-2" href="#">Latest Issue</a> -->
                   <li class="nav-item dropdown mx-2">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Latest Issue
                     </a>
                     <div class="dropdown-menu bg-dark border-0" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item text-secondary" href="#">Ocala</a>
-                      <a class="dropdown-item text-secondary" href="#">Orlando</a>
+                      <a class="dropdown-item text-secondary" href="#" itemprop="url">Ocala</a>
+                      <a class="dropdown-item text-secondary" href="#" itemprop="url">Orlando</a>
                     </div>
                   </li>
-                  <a class="nav-item nav-link mx-2" href="#">Free Classifieds</a>
-                  <a class="nav-item nav-link mx-2" href="#">Place Your Ad</a>
-                  <a class="nav-item nav-link mx-2" href="#">Get Coupons</a>
-                  <a class="nav-item nav-link mx-2" href="#">About Us</a>
-                  <a class="nav-item nav-link mx-2" href="#">Media Kit</a>
-                  <a class="nav-item nav-link mx-2" href="#">Contact Us</a>
+                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Free Classifieds</a>
+                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Place Your Ad</a>
+                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Get Coupons</a>
+                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">About Us</a>
+                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Media Kit</a>
+                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Contact Us</a>
                 </div>
               </div>
             </nav>
@@ -84,3 +84,13 @@
         </div>
       </div>
     </header>
+<?php
+  // Developer database connection
+	$link = mysqli_connect('localhost', 'root', 'root', 'el-anunciante');
+  // Production database connction
+	// $link = mysqli_connect('localhost', 'dms_admin', 'Colombia.0202', 'dms_articles');
+	if(mysqli_connect_error()){
+		die ("There was an error connecting to the database");
+	}
+	mysqli_set_charset($link,"utf8");
+?>
