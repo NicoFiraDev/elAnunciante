@@ -113,3 +113,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.download {
+  z-index: 1000;
+  text-shadow: 1px 1px 1px #000;
+  top: 0;
+  left: 0;
+}

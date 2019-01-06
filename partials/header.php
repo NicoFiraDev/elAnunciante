@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
     <!-- Custome CSS file -->
     <link rel="stylesheet" href="./resources/css/style.css">
-
     <title>El Anunciante FL | <?php echo $title; ?> </title>
   </head>
   <body>
@@ -60,15 +59,15 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav navbar-dark bg-dark mx-auto">
-                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-item nav-link mx-2" href="index.php" itemprop="url">Home <span class="sr-only">(current)</span></a>
                   <!-- <a class="nav-item nav-link mx-2" href="#">Latest Issue</a> -->
                   <li class="nav-item dropdown mx-2">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Latest Issue
                     </a>
                     <div class="dropdown-menu bg-dark border-0" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item text-secondary" href="#" itemprop="url">Ocala</a>
-                      <a class="dropdown-item text-secondary" href="#" itemprop="url">Orlando</a>
+                      <a class="dropdown-item text-secondary" href="latest-issue-ocala.php" itemprop="url">Ocala</a>
+                      <a class="dropdown-item text-secondary" href="latest-issue-orlando.php" itemprop="url">Orlando</a>
                     </div>
                   </li>
                   <a class="nav-item nav-link mx-2" href="#" itemprop="url">Free Classifieds</a>

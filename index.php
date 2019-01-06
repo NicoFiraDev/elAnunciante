@@ -43,8 +43,7 @@
 
     <!-- Small articles row -->
     <div class="row">
-      <div class="col-md-9 col-sm-8">
-
+      <section class="col-md-9 col-sm-8">
         <?php $query = 'SELECT * FROM `articles`  WHERE section != "Inmigración" ORDER BY `articles`.`id`  DESC ';
         if($result = mysqli_query($link, $query)){
             while ($article = mysqli_fetch_array($result)){ ?>
@@ -56,7 +55,7 @@
               <figcaption class="figure-caption"><cite><small><a class="text-muted text-decoration-none" href="#">Link de la imagen</a></small></cite></figcaption>
             </figure>
             <div class="article__text--sm d-inline-block flex-column container">
-              <a class="text-decoration-none" href="#"><h5 class="text-body mb-1"><?php echo $article['headline']; ?></h5></a>
+              <a class="text-decoration-none" href="#"><h5 class="text-body mb-1" itemprop="headline"><?php echo $article['headline']; ?></h5></a>
               <a class="text-decoration-none" href="#"><p class="text-muted mb-2 mx-0"><span class="ml-1"><small>Fecha</small></span> - <?php echo $article['section']; ?></p></a>
               <p><?php echo substr($article['body'], 0, 160); ?>...</p>
               <a class="btn btn-danger btn-lg w-50 shadow" href="#">Leer más</a>
@@ -64,9 +63,9 @@
           </div>
         </article>
         <?php }}; ?>
-      </div>
+      </section>
 
-      <div class="col-md-3 col-sm-4 pl-0">
+      <section class="col-md-3 col-sm-4 pl-0">
         <!-- Ads carousel -->
         <div id="carouselAds" class="carousel slide mt-4 mr-2 mx-auto" data-ride="carousel">
           <div class="carousel-inner">
@@ -82,7 +81,7 @@
           </div>
         </div>
         <!-- Ads carousel -->
-      </div>
+      </section>
     </div>
 </div>
 <?php include "partials/footer.php"; ?>
