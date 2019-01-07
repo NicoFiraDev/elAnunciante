@@ -18,7 +18,7 @@
     				$query = 'SELECT * FROM `articles` WHERE section = "Inmigración" ORDER BY `articles`.`id`  DESC LIMIT 3';
       				if ($result = mysqli_query($link, $query)){
       					while ($article = mysqli_fetch_array($result)){ ?>
-          <!-- First article -->
+          <!-- article -->
           <article class="carousel-item<?php if($counter <= 1){echo ' active'; } ?>">
             <img src="./resources/img/articles/<?php echo $article['img'];?>" class="d-block w-100" alt="<?php echo $article['headline'];?>">
             <div class="carousel-caption d-none d-md-block p-3 text-justify">
@@ -56,9 +56,9 @@
             </figure>
             <div class="article__text--sm d-inline-block flex-column container">
               <a class="text-decoration-none" href="#"><h5 class="text-body mb-1" itemprop="headline"><?php echo $article['headline']; ?></h5></a>
-              <a class="text-decoration-none" href="#"><p class="text-muted mb-2 mx-0"><span class="ml-1"><small>Fecha</small></span> - <?php echo $article['section']; ?></p></a>
+              <a class="text-decoration-none" href="#"><p class="text-muted mb-2 mx-0"><?php echo $article['section']; ?> - <span class="ml-1"><small>Fecha</small></span></p></a>
               <p><?php echo substr($article['body'], 0, 160); ?>...</p>
-              <a class="btn btn-danger btn-lg w-50 shadow" href="#">Leer más</a>
+              <a class="btn btn-danger btn-lg w-50 rounded-pill shadow" href="#">Leer más</a>
             </div>
           </div>
         </article>

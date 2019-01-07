@@ -1,4 +1,4 @@
-<?php $title='Print Edition Ocala'; include 'partials/header.php'; ?>
+<?php $title='Print Edition Orlando'; include 'partials/header.php'; ?>
 <section class="content-fluid">
   <div class="row">
     <div class="mx-auto my-3 py-2 text-center">

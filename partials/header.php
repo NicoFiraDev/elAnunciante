@@ -53,7 +53,7 @@
       <div class="container-fluid bg-dark shadow" style="border-top: 5px solid #ed1c24;">
         <div class="row">
           <div class="col-sm-12 mx-auto">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark " itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" itemscope itemtype="https://schema.org/SiteNavigationElement">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -70,12 +70,12 @@
                       <a class="dropdown-item text-secondary" href="latest-issue-orlando.php" itemprop="url">Orlando</a>
                     </div>
                   </li>
-                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Free Classifieds</a>
-                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Place Your Ad</a>
-                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Get Coupons</a>
-                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">About Us</a>
-                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Media Kit</a>
-                  <a class="nav-item nav-link mx-2" href="#" itemprop="url">Contact Us</a>
+                  <a class="nav-item nav-link mx-2" href="free-classifieds.php" itemprop="url">Free Classifieds</a>
+                  <a class="nav-item nav-link mx-2" href="place-your-ad.php" itemprop="url">Place Your Ad</a>
+                  <a class="nav-item nav-link mx-2" href="get-coupons.php" itemprop="url">Get Coupons</a>
+                  <a class="nav-item nav-link mx-2" href="about-us.php" itemprop="url">About Us</a>
+                  <a class="nav-item nav-link mx-2" href="media-kit.php" itemprop="url">Media Kit</a>
+                  <a class="nav-item nav-link mx-2" href="contact-us.php" itemprop="url">Contact Us</a>
                 </div>
               </div>
             </nav>
