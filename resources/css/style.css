@@ -115,10 +115,14 @@ body {
 }
 
 .download {
-  z-index: 1000;
+  z-index: 900;
   text-shadow: 1px 1px 1px #000;
   top: 0;
   left: 0;
+}
+
+.download-icon {
+  font-size: 1.5rem;
 }
 
 .form-logo {

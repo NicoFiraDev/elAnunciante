@@ -13,7 +13,12 @@
 		if(!$_POST['name']){$error .= "A name is required<br>";}
 
 		if($error != ""){
-			$error = '<div class="alert alert-danger mx-auto"><p><strong>There were error(s) in your form:</strong></p>'. $error .'</div>';
+			$error = '<div class="alert alert-danger alert-dismissible fade show mx-auto" role="alert">
+				<p><strong>There were error(s) in your form:</strong></p>'. $error .'
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>';
 		} else {
 			// $emailTo = 'info@elanunciantefl.com';
       $emailTo = 'digimarketingsolutions.co@gmail.com';
@@ -36,7 +41,12 @@
 			$header .= "X-Mailer: PHP/". phpversion() ."\r\n";
 
 			if(mail($emailTo, $subject, $content, $header)) {
-				$success = "<div class='alert alert-success mx-auto'><p>Your message was send, we'll get back to you ASAP!</p></div>";
+				$success = "<div class='alert alert-success alert-dismissible fade show mx-auto' role='alert'>
+					<p>Your message was send, we'll get back to you ASAP!</p>
+					<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+						<span aria-hidden='true'>&times;</span>
+					</button>
+				</div>";
 			}
 		}
 	}
