@@ -51,14 +51,14 @@
         <article class="container-fluid  my-4 py-1 px-3 bg-light rounded shadow-sm h-auto" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="row p-2 my-2 h-auto" itemtype="https://schema.org/NewsArticle">
             <figure class="figure float-left article__img d-inline-block my-0 h-auto">
-              <a href="#" itemprop="image" itemscope itemtype="https://schema.org/image"><img class="figure-img img-fluid rounded shadow d-block w-100 small-img" src="./resources/img/articles/<?php echo $article['img']; ?>" alt="<?php echo $article['headline'];?>"></a>
+              <a href="article.php?article=<?php echo $article['id']; ?>" itemprop="image" itemscope itemtype="https://schema.org/image"><img class="figure-img img-fluid rounded shadow d-block w-100 small-img" src="./resources/img/articles/<?php echo $article['img']; ?>" alt="<?php echo $article['headline'];?>"></a>
               <figcaption class="figure-caption"><cite><small><a class="text-muted text-decoration-none" href="#">Link de la imagen</a></small></cite></figcaption>
             </figure>
             <div class="article__text--sm d-inline-block flex-column container">
-              <a class="text-decoration-none" href="#"><h5 class="text-body mb-1" itemprop="headline"><?php echo $article['headline']; ?></h5></a>
-              <a class="text-decoration-none" href="#"><p class="text-muted mb-2 mx-0"><?php echo $article['section']; ?> - <span class="ml-1"><small>Fecha</small></span></p></a>
+              <a class="text-decoration-none" href="article.php?article=<?php echo $article['id']; ?>"><h5 class="text-body mb-1" itemprop="headline"><?php echo $article['headline']; ?></h5></a>
+              <a class="text-decoration-none" href="article.php?article=<?php echo $article['id']; ?>"><p class="text-muted mb-2 mx-0"><?php echo $article['section']; ?> - <span class="ml-1"><small>Fecha</small></span></p></a>
               <p><?php echo substr($article['body'], 0, 160); ?>...</p>
-              <a class="btn btn-danger btn-lg w-50 rounded-pill shadow" href="#">Leer más</a>
+              <a class="btn btn-danger btn-lg w-50 rounded-pill shadow" href="article.php?article=<?php echo $article['id']; ?>">Leer más</a>
             </div>
           </div>
         </article>
@@ -66,9 +66,7 @@
       </section>
 
       <section class="col-md-3 col-sm-4 pl-0">
-        <!-- Ads carousel -->
         <?php include 'partials/main-ads.php'; ?>
-        <!-- Ads carousel -->
       </section>
     </div>
 </div>

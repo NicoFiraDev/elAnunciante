@@ -20,8 +20,7 @@
 				</button>
 			</div>';
 		} else {
-			// $emailTo = 'info@elanunciantefl.com';
-      $emailTo = 'digimarketingsolutions.co@gmail.com';
+			$emailTo = "info@elanunciantefl.com";
 			$subject =  $_POST['name'] . " ha solicitado un anuncio con las siguientes caracteristicas:";
 			$content = '<html><body>';
 			$content .= '<h1>' . $_POST['name'] . ' ha solicitado un anuncio con las siguientes caracteristicas:</h1>';
@@ -31,9 +30,9 @@
 			$content .= '<p>Método de pago: ' . $_POST['payment'] . '</p>';
 			$content .= '<p>Diseño de anuncio: ' . $_POST['design'] . '</p>';
 			$content .= '<p>Su correo electrónico es: ' . $_POST['email'] . '</p>';
-			$header = "Reply-To: digimarketingsolutions.co@gmail.com\r\n";
-			$header .= "Return-Path: digimarketingsolutions.co@gmail.com\r\n";
-			$header .= "From: digimarketingsolutions.co@gmail.com\r\n";
+			$header = "Reply-To: info@elanunciantefl.com\r\n";
+			$header .= "Return-Path: info@elanunciantefl.com\r\n";
+			$header .= "From: info@elanunciantefl.com\r\n";
 			$header .= "Organization: El Anunciante FL";
 			$header .= "MIME-Version: 1.0\r\n";
 			$header .= "Content-Type: text/html; charset=utf-8\r\n";

@@ -1,7 +1,7 @@
 <?php $title='About Us'; include 'partials/header.php'; ?>
-<section class="container-fluid">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-9 col-sm-8 mt-4">
+    <section class="col-md-9 col-sm-8 mt-4">
       <div class="row my-4">
         <div class="title-h2 rounded w-100 mx-3 mb-4 shadow">
           <h2 class="my-1">About Us</h2>
@@ -65,10 +65,10 @@
   				</div>
   			</div>
       </div>
-    </div>
-    <div class="col-md-3 col-sm-4 mt-4">
+    </section>
+    <section class="col-md-3 col-sm-4 mt-4">
       <?php include 'partials/main-ads.php'; ?>
-    </div>
+    </section>
   </div>
-</section>
+</div>
 <?php include 'partials/footer.php'; ?>
