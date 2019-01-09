@@ -19,13 +19,15 @@
       				if ($result = mysqli_query($link, $query)){
       					while ($article = mysqli_fetch_array($result)){ ?>
           <!-- article -->
-          <article class="carousel-item<?php if($counter <= 1){echo ' active'; } ?>">
-            <img src="./resources/img/articles/<?php echo $article['img'];?>" class="d-block w-100" alt="<?php echo $article['headline'];?>">
-            <div class="carousel-caption d-none d-md-block p-3 text-justify">
-              <h5><?php echo $article['headline']; ?></h5>
-              <p><?php echo substr($article['body'], 0, 120); ?>...</p>
-            </div>
-          </article>
+          <a href="article.php?article=<?php echo $article['id']; ?>">
+            <article class="carousel-item<?php if($counter <= 1){echo ' active'; } ?>">
+              <img src="./resources/img/articles/<?php echo $article['image'];?>" class="d-block w-100" alt="<?php echo $article['headline'];?>">
+              <div class="carousel-caption d-none d-md-block p-3 text-justify">
+                <h5><?php echo $article['headline']; ?></h5>
+                <p><?php echo substr($article['body'], 0, 120); ?>...</p>
+              </div>
+            </article>
+          </a>
           <?php $counter++; }} ?>
         </div>
         <!-- Carousel controls -->
@@ -51,12 +53,12 @@
         <article class="container-fluid  my-4 py-1 px-3 bg-light rounded shadow-sm h-auto" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="row p-2 my-2 h-auto" itemtype="https://schema.org/NewsArticle">
             <figure class="figure float-left article__img d-inline-block my-0 h-auto">
-              <a href="article.php?article=<?php echo $article['id']; ?>" itemprop="image" itemscope itemtype="https://schema.org/image"><img class="figure-img img-fluid rounded shadow d-block w-100 small-img" src="./resources/img/articles/<?php echo $article['img']; ?>" alt="<?php echo $article['headline'];?>"></a>
-              <figcaption class="figure-caption"><cite><small><a class="text-muted text-decoration-none" href="#">Link de la imagen</a></small></cite></figcaption>
+              <a href="article.php?article=<?php echo $article['id']; ?>" itemprop="image" itemscope itemtype="https://schema.org/image"><img class="figure-img img-fluid rounded shadow d-block w-100 small-img" src="./resources/img/articles/<?php echo $article['image']; ?>" alt="<?php echo $article['headline'];?>"></a>
+              <figcaption class="figure-caption"><cite><small><a class="text-muted text-decoration-none" href="#"><?php echo $article['image-link'];?></a></small></cite></figcaption>
             </figure>
-            <div class="article__text--sm d-inline-block flex-column container">
+            <div class="article__text--sm d-inline-block flex-column container-fluid">
               <a class="text-decoration-none" href="article.php?article=<?php echo $article['id']; ?>"><h5 class="text-body mb-1" itemprop="headline"><?php echo $article['headline']; ?></h5></a>
-              <a class="text-decoration-none" href="article.php?article=<?php echo $article['id']; ?>"><p class="text-muted mb-2 mx-0"><?php echo $article['section']; ?> - <span class="ml-1"><small>Fecha</small></span></p></a>
+              <a class="text-decoration-none" href="article.php?article=<?php echo $article['id']; ?>"><p class="text-muted mb-2 mx-0"><?php echo $article['section']; ?> - <span class="ml-1"><small><?php echo date('F Y', $article['date']); ?></small></span></p></a>
               <p><?php echo substr($article['body'], 0, 160); ?>...</p>
               <a class="btn btn-danger btn-lg w-50 rounded-pill shadow" href="article.php?article=<?php echo $article['id']; ?>">Leer más</a>
             </div>

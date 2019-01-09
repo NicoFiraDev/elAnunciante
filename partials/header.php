@@ -26,11 +26,11 @@
       <div class="header row justify-content-center align-items-center p-2">
         <!-- Header logo -->
           <div class="header__logo col-sm-1 col-md-2 h-auto text-center pt-0">
-            <a href="#"><img class="img-fluid w-75 h-auto" src="./resources/img/logo.png" alt="Papagayo El Anunciante FL"></a>
+            <a href="index.php"><img class="img-fluid w-75 h-auto" src="./resources/img/logo.png" alt="Papagayo El Anunciante FL"></a>
           </div>
         <!-- Header name -->
           <div class="col-sm-7 col-md-6 text-center">
-            <a class="text-decoration-none" href="#">
+            <a class="text-decoration-none" href="index.php">
               <h1 class="header__name">ElAnuncianteFL.com</h1>
               <p class="header__name--sm h5">The Best Way To Reach The Hispanic Community</p>
             </a>
@@ -83,13 +83,4 @@
         </div>
       </div>
     </header>
-<?php
-  // Developer database connection
-	$link = mysqli_connect('localhost', 'root', 'root', 'el-anunciante');
-  // Production database connction
-	// $link = mysqli_connect('localhost', 'dms_admin', 'Colombia.0202', 'dms_articles');
-	if(mysqli_connect_error()){
-		die ("There was an error connecting to the database");
-	}
-	mysqli_set_charset($link,"utf8");
-?>
+<?php include 'db/dbConfig.php'; ?>

@@ -16,12 +16,12 @@
       <article class="my-4" itemscope itemtype="https://schema.org/NewsArticle">
         <div class="" itemtype="https://schema.org/NewsArticle">
           <figure>
-            <img class="figure-img rounded shadow w-100" src="./resources/img/articles/<?php echo $article['img']; ?>" alt="<?php echo $article['headline']; ?>" itemprop="image" itemscope itemtype="https://schema.org/image">
-            <figcaption></figcaption>
+            <img class="single-article__img figure-img rounded shadow w-100" src="./resources/img/articles/<?php echo $article['image']; ?>" alt="<?php echo $article['headline']; ?>" itemprop="image" itemscope itemtype="https://schema.org/image">
+            <figcaptionclass="figure-caption"><cite><small><a class="text-muted text-decoration-none ml-2" href="#"><?php echo $article['image-link'];?></a></small></cite></figcaption>
           </figure>
-          <div class="container">
+          <div class="container-fluid">
             <h2 class="text-body mb-1" itemprop="headline"><?php echo $article['headline']; ?></h2>
-            <a class="text-decoration-none" href="#"><p class="text-muted mb-2 mx-0"><?php echo $article['section']; ?> - <span class="ml-1"><small>Fecha</small></span></p></a>
+            <a class="text-decoration-none" href="#"><p class="text-muted mb-2 mx-0"><?php echo $article['section']; ?> - <span class="ml-1"><small><?php echo date('F Y', $article['date']);?></small></span></p></a>
             <p class="text-justify my-4 p-1"><?php echo $article['body']; ?></p>
           </div>
         </div>
@@ -35,7 +35,7 @@
 
 							<article class="article-previews m-1 rounded m-1 shadow">
 								<a href="article.php?article=<?php echo $article['id'];?>">
-                  <img src="resources/img/articles/<?php echo $article['img']; ?>" alt="<?php echo $article['headline'] ?>" class="article-previews__img w-100 h-100 shadow rounded">
+                  <img src="resources/img/articles/<?php echo $article['image']; ?>" alt="<?php echo $article['headline'] ?>" class="article-previews__img w-100 h-100 shadow rounded">
                 </a>
 								<h4 class="article-previews__text rounded-bottom m-0 p-2 w-100"><?php echo $article['headline'] ?></h4>
 							</article>

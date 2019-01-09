@@ -25,7 +25,7 @@
 			$content = '<html><body>';
 			$content .= '<h1>' . $_POST['name'] . ' ha solicitado un anuncio con las siguientes caracteristicas:</h1>';
 			$content .= '<p>Tamaño: ' . $_POST['size'] . '</p>';
-			$content .= '<p>Estilo: A ' . $_POST['style'] . '</p>';
+			$content .= '<p>Estilo: ' . $_POST['style'] . '</p>';
 			$content .= '<p>Duración: ' . $_POST['term'] . '</p>';
 			$content .= '<p>Método de pago: ' . $_POST['payment'] . '</p>';
 			$content .= '<p>Diseño de anuncio: ' . $_POST['design'] . '</p>';
