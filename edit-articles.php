@@ -1,42 +1,14 @@
-<?php include 'partials/header.php'; ?>
-<?php
-$time = time();
-$statusMsg = '';
-$targetDir = 'resources/img/articles/';
-$fileName = basename($_FILES["file"]["name"]);
-$targetFilePath = $targetDir . $fileName;
-$fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-
-
-if(isset($_POST['submit']) && !empty($_FILES["file"]["name"])){
-  $allowTypes = array('jpg','png','jpeg','gif','pdf');
-  if(in_array($fileType, $allowTypes)){
-    if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-      $query = "INSERT INTO articles (`date`, `section`,`image`,`image-link`,`image-path`, `headline`, `body`, `author`)
-                VALUES ($time,'".$_POST['section']."','$fileName','".$_POST['image-link']."','$targetFilePath','".$_POST['headline']."','".$_POST['body']."','".$_POST['author']."')";
-        if(mysqli_query($link, $query)){
-          $statusMsg = "<div class='alert alert-success alert-dismissible fade show mx-auto' role='alert'>
-            <p>Article and photo ".$fileName."</p>
-            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-              <span aria-hidden='true'>&times;</span>
-            </button>
-          </div>";
-        } else {
-          $statusMsg = '<div class="alert alert-danger alert-dismissible fade show mx-auto" role="alert">
-            <p><strong>There were error(s) in your form:</strong></p>
-            <p>'.mysqli_error($link).'</p>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>';
-        }
-      }
-    }
+<?php include 'partials/header.php';
+  $id = $_GET['article'];
+  if(filter_var($id, FILTER_VALIDATE_INT) === false){
+    die("No valid ID");
   }
+  $query =
+
 ?>
 <section class="container-fluid my-5">
   <p><?php echo $statusMsg;?></p>
-  <a href="all-articles.php" class="btn btn-lg btn-success m-4 mx-auto" role="button">All articles</a>
+  <!-- <a href="all-articles.php" class="btn btn-lg btn-success m-4 mx-auto" role="button">All articles</a> -->
   <div class="row my-5 px-4">
     <div class="col-12">
       <form action="new-article.php" method="POST" enctype="multipart/form-data">
