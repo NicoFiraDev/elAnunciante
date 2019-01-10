@@ -23,7 +23,7 @@
               <img src="./resources/img/articles/<?php echo $article['image'];?>" class="d-block w-100" alt="<?php echo $article['headline'];?>">
               <div class="carousel-caption d-none d-md-block p-3 text-justify">
                 <h5><?php echo $article['headline']; ?></h5>
-                <p><?php echo substr($article['body'], 0, 120); ?>...</p>
+                <p><?php echo $article['preview']; ?>...</p>
               </div>
             </article>
           </a>
@@ -74,7 +74,7 @@
                 </span>
               </p>
             </a>
-            <p><?php echo substr($article['body'], 0, 160); ?>...</p>
+            <p><?php echo $article['preview']; ?>...</p>
             <a class="btn btn-danger btn-lg w-50 rounded-pill shadow" href="article.php?article=<?php echo $article['id']; ?>">Leer más</a>
           </div>
         </div>

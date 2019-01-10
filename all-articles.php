@@ -34,7 +34,7 @@
                 </span>
               </p>
             </a>
-            <p><?php echo substr($article['body'], 0, 160);?>...</p>
+            <p><?php echo $article['preview'];?>...</p>
             <div class="btn-group shadow" role="group" aria-label="Basic example">
               <a class="btn btn-primary" href="article.php?article=<?php echo $article['id'];?>" role="button">Reed more</a>
               <a class="btn btn-info" href="edit-articles.php?article=<?php echo $article['id'];?>" role="button">Edit</a>

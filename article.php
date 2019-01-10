@@ -33,7 +33,7 @@
                 </span>
               </p>
             </a>
-            <p class="text-justify my-4 p-1"><?php echo $article['body']; ?></p>
+            <div class="text-justify my-4 p-1"><?php echo $article['body']; ?></div>
           </div>
         </div>
       </article>

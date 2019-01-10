@@ -1,5 +1,5 @@
-<?php include 'partials/header.php'; ?>
 <?php
+include 'partials/header.php';
 $time = time();
 $statusMsg = '';
 $targetDir = 'resources/img/articles/';
@@ -12,8 +12,8 @@ if(isset($_POST['submit']) && !empty($_FILES["file"]["name"])){
   $allowTypes = array('jpg','png','jpeg','gif','pdf');
   if(in_array($fileType, $allowTypes)){
     if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-      $query = "INSERT INTO articles (`date`, `section`,`image`,`image-link`,`image-path`, `headline`, `body`, `author`)
-                VALUES ($time,'".$_POST['section']."','$fileName','".$_POST['image-link']."','$targetFilePath','".$_POST['headline']."','".$_POST['body']."','".$_POST['author']."')";
+      $query = "INSERT INTO articles (`date`,`section`,`image`,`image-link`,`image-path`,`headline`,`preview`,`body`,`author`)
+                VALUES ($time,'".$_POST['section']."','$fileName','".$_POST['image-link']."','$targetFilePath','".$_POST['headline']."','".$_POST['preview']."','".$_POST['body']."','".$_POST['author']."')";
         if(mysqli_query($link, $query)){
           $statusMsg = "<div class='alert alert-success alert-dismissible fade show mx-auto' role='alert'>
             <p>Article and photo ".$fileName."</p>
@@ -68,12 +68,12 @@ if(isset($_POST['submit']) && !empty($_FILES["file"]["name"])){
           <input class="form-control" type="text" value="Julieta Pinzón" name="author" id="author" autocomplete="off">
         </div>
         <div class="form-group">
-          <label for="preview">Article Preview</label>
-          <textarea type="text" class="form-control" id="preview" name="preview" placeholder="Article preview" maxlength="160"></textarea>
+          <label for="new-preview">Article Preview</label>
+          <textarea type="text" class="form-control" id="new-preview" name="preview" placeholder="Article preview" maxlength="160"></textarea>
         </div>
         <div class="form-group">
-          <label for="body">Article Body</label>
-          <textarea type="text" class="form-control" id="body" name="body" placeholder="Article body" rows="20"></textarea>
+          <label for="new-body">Article Body</label>
+          <textarea type="text" class="form-control" id="new-body" name="body" placeholder="Article body" rows="20"></textarea>
         </div>
         <div class="form-group">
           <input class="btn btn-outline-danger w-25 shadow" type="submit" name="submit" value="Publish">
@@ -82,6 +82,9 @@ if(isset($_POST['submit']) && !empty($_FILES["file"]["name"])){
     </div>
   </div>
 </section>
-<script type="text/javascript" src="./vendors/js/nicEdit.js"></script>
-<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+<script type="text/javascript" src="./vendors/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+  CKEDITOR.replace('new-preview');
+  CKEDITOR.replace('new-body');
+</script>
 <?php include 'partials/footer.php'; ?>
