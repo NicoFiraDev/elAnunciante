@@ -37,7 +37,7 @@ if(isset($_POST['submit']) && !empty($_FILES["file"]["name"])){
 <section class="container-fluid my-5">
   <p><?php echo $statusMsg;?></p>
   <a href="all-articles.php" class="btn btn-lg btn-success m-4 mx-auto" role="button">All articles</a>
-  <div class="row my-5 px-4">
+  <div class="row mb-5 px-4">
     <div class="col-12">
       <form action="new-article.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
@@ -61,11 +61,11 @@ if(isset($_POST['submit']) && !empty($_FILES["file"]["name"])){
         </div>
         <div class="form-group">
           <label for="image-link">Article image link</label>
-          <input class="form-control" type="text" value="N/A" name="image-link" id="image-link" autocomplete="off">
+          <input class="form-control" type="text" name="image-link" id="image-link" autocomplete="off">
         </div>
         <div class="form-group">
           <label for="author">Author</label>
-          <input class="form-control" type="text" value="Julieta Pinzón" name="author" id="author" autocomplete="off">
+          <input class="form-control" type="text" value="Julieta Pinzón" name="author" id="author">
         </div>
         <div class="form-group">
           <label for="new-preview">Article Preview</label>

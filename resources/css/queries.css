@@ -1,0 +1,18 @@
+@media (max-width: 767px) {
+  .article__img {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .article__text--sm {
+    width: 100%;
+  }
+
+  .header__name {
+    font-size: 150%;
+  }
+
+  .header__name--sm {
+    font-size: 90%;
+  }
+}

@@ -64,9 +64,9 @@
   </div>
 
   <div class="row">
-    <div class="col-4 h-auto form-logo"></div>
-    <div class="col-8">
-      <form class="m-5" method="post">
+    <div class="col-sm-4 h-auto form-logo d-none d-md-block"></div>
+    <div class="col-12 col-md-8">
+      <form class="m-1 m-sm-5" method="post">
 
         <fieldset class="form-group my-4">
           <div class="row">
@@ -186,13 +186,13 @@
         <fieldset class="form-group my-4">
           <div class="row">
             <div class="col-sm-5 px-1">
-              <input type="text" class="form-control" placeholder="Full name" name="name" required>
+              <input type="text" class="form-control my-1" placeholder="Full name" name="name" required>
             </div>
             <div class="col-sm-5 px-1">
-              <input type="email" class="form-control" placeholder="Email address" name="email" required>
+              <input type="email" class="form-control my-1" placeholder="Email address" name="email" required>
             </div>
             <div class="col-sm-2 px-1">
-              <button type="submit" class="btn btn-outline-danger">Submit</button>
+              <button type="submit" class="btn btn-outline-danger my-1">Submit</button>
             </div>
           </div>
         </fieldset>

@@ -17,7 +17,7 @@
             <figcaption class="figure-caption">
               <cite>
                 <small>
-                  <a class="text-muted text-decoration-none" href="#"><?php echo $article['image-link'];?></a>
+                  <a class="text-muted text-decoration-none" href="<?php echo $article['image-link'];?>" target="_blank"><?php echo $article['image-link'];?></a>
                 </small>
               </cite>
             </figcaption>
@@ -34,7 +34,7 @@
                 </span>
               </p>
             </a>
-            <p><?php echo $article['preview'];?>...</p>
+            <p><?php echo $article['preview'];?></p>
             <div class="btn-group shadow" role="group" aria-label="Basic example">
               <a class="btn btn-primary" href="article.php?article=<?php echo $article['id'];?>" role="button">Reed more</a>
               <a class="btn btn-info" href="edit-articles.php?article=<?php echo $article['id'];?>" role="button">Edit</a>

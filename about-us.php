@@ -66,7 +66,7 @@
   			</div>
       </div>
     </section>
-    <section class="col-md-3 col-sm-4 mt-4">
+    <section class="col-8 col-sm-4 col-md-3 pl-0 mx-auto mt-4">
       <?php include 'partials/main-ads.php'; ?>
     </section>
   </div>

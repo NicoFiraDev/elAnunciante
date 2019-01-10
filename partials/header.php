@@ -19,14 +19,17 @@
     <link rel="stylesheet" href="./vendors/css/bootstrap.min.css">
     <!-- Custome CSS file -->
     <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/queries.css">
     <title>El Anunciante FL | <?php echo $title; ?> </title>
   </head>
   <body>
     <header class="container-fluid pt-0 px-0">
       <div class="header row justify-content-center align-items-center p-2">
         <!-- Header logo -->
-          <div class="header__logo col-sm-1 col-md-2 h-auto text-center pt-0">
-            <a href="index.php"><img class="img-fluid w-75 h-auto" src="./resources/img/logo.png" alt="Papagayo El Anunciante FL"></a>
+          <div class="header__logo col-md-2 h-auto text-center pt-0 d-none d-md-block">
+            <a href="index.php">
+              <img class="img-fluid w-75 h-auto" src="./resources/img/logo.png" alt="Papagayo El Anunciante FL">
+            </a>
           </div>
         <!-- Header name -->
           <div class="col-sm-7 col-md-6 text-center">
@@ -36,13 +39,13 @@
             </a>
           </div>
         <!-- Header info -->
-          <div class="col-sm-4 col-md-4 ml-auto">
+          <div class="col-sm-5 col-md-4 px-sm-0 px-md-2 text-center text-sm-left">
             <div class="nav__info nav flex-column">
               <a class="nav-link text-secondary p-0" href="tel:+13524505261"><i class="ion-ios-telephone mr-md-1 mr-lg-2"></i>352-450-5261</a>
               <a class="nav-link text-secondary p-0" href="tel:+18006603515"><i class="ion-ios-telephone mr-md-1 mr-lg-2"></i>800-660-3515</a>
               <a class="nav-link text-secondary p-0" href="mailto:info@elanunciantefl.com"><i class="ion-ios-email mr-2"></i>info@elanunciantefl.com</a>
             </div>
-            <div class="nav__social nav">
+            <div class="nav__social nav justify-content-center justify-content-sm-start">
               <a class="nav-link text-secondary" href="https://www.facebook.com/pg/ElAnuncianteFL" target="_blank"><i class="ion-social-facebook"></i></a>
               <a class="nav-link text-secondary" href="https://www.instagram.com/elanunciantefl/?hl=es-la" target="_blank"><i class="ion-social-instagram"></i></a>
               <a class="nav-link text-secondary" href="https://www.twitter.com/ElAnuncianteFL" target="_blank"><i class="ion-social-twitter"></i></a>
@@ -50,7 +53,8 @@
             </div>
           </div>
       </div>
-      <div class="container-fluid bg-dark shadow" style="border-top: 5px solid #ed1c24;">
+      <div class="js--sticky-nav"></div>
+      <div class="container-fluid bg-dark shadow js--nav" style="border-top: 5px solid #ed1c24;">
         <div class="row">
           <div class="col-sm-12 mx-auto">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" itemscope itemtype="https://schema.org/SiteNavigationElement">

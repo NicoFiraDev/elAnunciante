@@ -17,16 +17,16 @@
           <input type="hidden" name="id" value="<?php echo $article['id'];?>">
         <div class="form-group">
           <label for="headline">Article Headline</label>
-          <input type="text" class="form-control" id="headline" name="headline" value="<?php echo $article['headline'];?>" maxlength="100" autocomplete="off">
+          <input type="text" class="form-control" id="headline" name="headline" value='<?php echo $article["headline"];?>' maxlength="100" autocomplete="off">
         </div>
         <div class="form-group">
           <label for="section">Section</label>
           <select class="form-control" id="section" name="section">
-            <option value=""><?php echo $article['section'];?></option>
+            <option value='<?php echo $article["section"];?>'><?php echo $article['section'];?></option>
             <?php $sectionQuery = 'SELECT DISTINCT `section` FROM `articles` ORDER BY `section` ASC';
             if($result = mysqli_query($link, $sectionQuery)){
                 while ($sections = mysqli_fetch_array($result)){ ?>
-                  <option value="<?php echo $article['section']; ?>"><?php echo $sections['section']; ?></option>
+                  <option value='<?php echo $article["section"];?>'><?php echo $sections['section']; ?></option>
             <?php }}; ?>
           </select>
         </div>
@@ -36,19 +36,19 @@
         </div>
         <div class="form-group">
           <label for="image-link">Article image link</label>
-          <input class="form-control" type="text" value="<?php echo $article['image-link'];?>" name="image-link" id="image-link" autocomplete="off">
+          <input class="form-control" type="text" value='<?php echo $article["image-link"];?>' name="image-link" id="image-link" autocomplete="off">
         </div>
         <div class="form-group">
           <label for="author">Author</label>
-          <input class="form-control" type="text" value="<?php echo $article['author'];?>" name="author" id="author" autocomplete="off">
+          <input class="form-control" type="text" value='<?php echo $article["author"];?>' name="author" id="author" autocomplete="off">
         </div>
         <div class="form-group">
           <label for="preview">Article Preview</label>
-          <textarea type="text" class="form-control" id="preview" name="preview" maxlength="160"><?php echo $article['preview'];?></textarea>
+          <textarea type="text" class="form-control" id="preview" name="preview" maxlength="160"><?php echo $article["preview"];?></textarea>
         </div>
         <div class="form-group">
           <label for="body">Article Body</label>
-          <textarea type="text" class="form-control" id="body" name="body"><?php echo $article['body'];?></textarea>
+          <textarea type="text" class="form-control" id="body" name="body"><?php echo $article["body"];?></textarea>
         </div>
         <div class="form-group">
           <input class="btn btn-outline-info w-25 shadow" type="submit" name="submit" value="Update">

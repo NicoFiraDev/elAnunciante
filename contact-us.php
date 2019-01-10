@@ -44,11 +44,11 @@
   }
 ?>
 <div class="container-fluid">
-  <div class="row align-items-center my-4">
-    <section class="col-sm-6 px-2">
+  <div class="row align-items-center my-4 flex-column flex-md-row">
+    <section class="col-12 col-md-6 px-2">
       <div class="row align-items-center my-4 pl-2 ml-1 justify-content-center">
   			<div class="col-sm-5 m-2 mt-4 p-2">
-    			<table>
+    			<table class="mx-auto">
     				<tbody>
     					<tr>
     						<td><b>Contact name: </b></td>
@@ -69,8 +69,8 @@
     				</tbody>
     			</table>
   			</div>
-  			<div class="col-sm-6 m-2 mt-4 p-2 border-left pl-3">
-  				<table>
+  			<div class="col-sm-6 m-2 mt-4 p-2 border-sm-left pl-3">
+  				<table class="mx-auto">
   					<thead>
   						<tr>
   							<th class="text-center" colspan="2">Working hours</th>
@@ -105,7 +105,7 @@
   			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111477.85084099123!2d-82.22684847046195!3d29.174017069669265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e62b541cba3ce5%3A0xf5f53be4b1380536!2sOcala%2C+Florida%2C+EE.+UU.!5e0!3m2!1ses-419!2sco!4v1540410560930" width="90%" height="450" frameborder="0" style="border:0" allowfullscreen class="shadow"></iframe>
   		</div>
     </section>
-    <section class="col-sm-6">
+    <section class="col-12 col-md-6">
       <div class="row mx-auto w-auto text-center">
         <?php echo $error.$success ?>
       </div>

@@ -50,7 +50,7 @@
 				<?php }};?>
 			</div>
     </section>
-    <div class="col-sm-4 col-md-3">
+    <div class="col-8 col-sm-4 col-md-3 pl-0 mx-auto">
       <?php include 'partials/main-ads.php'; ?>
     </div>
   </div>
