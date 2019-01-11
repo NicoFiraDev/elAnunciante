@@ -89,6 +89,10 @@ body {
   background:rgba(0,0,0,0.4);
 }
 
+.carousel-img {
+  object-fit: cover;
+}
+
 .small-img {
   max-height: 200px;
   object-fit: cover;
@@ -108,10 +112,8 @@ body {
   max-height: 21.9rem;
 }
 
-.test-img {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.ads-sm {
+  max-height: 23rem;
 }
 
 /* Printed Issue */
@@ -223,4 +225,9 @@ body {
 
 .image-link {
   overflow-wrap: break-word;
+}
+
+#carouselArticle, .carousel-inner, .carousel-item {
+  height: inherit;
+  max-height: 25rem;
 }

@@ -1,6 +1,6 @@
 <?php $title='About Us'; include 'partials/header.php'; ?>
 <div class="container-fluid">
-  <div class="row">
+  <div class="row flex-column-reverse flex-md-row">
     <section class="col-md-9 col-sm-8 mt-4">
       <div class="row my-4">
         <div class="title-h2 rounded w-100 mx-3 mb-4 shadow">
@@ -66,7 +66,7 @@
   			</div>
       </div>
     </section>
-    <section class="col-8 col-sm-4 col-md-3 pl-0 mx-auto mt-4">
+    <section class="col-8 col-sm-6 col-md-3 pl-0 mx-auto">
       <?php include 'partials/main-ads.php'; ?>
     </section>
   </div>

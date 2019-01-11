@@ -9,8 +9,8 @@
   	if ($result = mysqli_query($link, $query)){
   		$article = mysqli_fetch_array($result); } ?>
 <div class="container-fluid">
-  <div class="row mt-2">
-    <section class="col-sm-8 col-md-9">
+  <div class="row mt-2 flex-column-reverse flex-md-row">
+    <section class="col-md-9 col-sm-10 mx-sm-auto">
       <article class="my-4" itemscope itemtype="https://schema.org/NewsArticle">
         <div class="" itemtype="https://schema.org/NewsArticle">
           <figure>
@@ -26,11 +26,12 @@
           <div class="container-fluid">
             <h2 class="text-body mb-1" itemprop="headline"><?php echo $article['headline']; ?></h2>
             <a class="text-decoration-none" href="#">
-              <p class="text-muted mb-2 mx-0"><?php echo $article['section']; ?>
-                -
-                <span class="ml-1">
+              <p class="text-muted mb-2 mx-0 d-flex justify-content-between">
+                <span><?php echo $article['section'];?>
+                -  
                   <small><?php echo date('F Y', $article['date']);?></small>
                 </span>
+                <span><?php echo $article['author'];?></span>
               </p>
             </a>
             <div class="text-justify my-4 p-1"><?php echo $article['body']; ?></div>
@@ -41,7 +42,7 @@
 				<?php $query = 'SELECT * FROM articles WHERE id!= '.$id.' ORDER BY rand() LIMIT 9';
 					if ($result = mysqli_query($link, $query)){
 						while ( $article = mysqli_fetch_array($result)){ ?>
-							<article class="article-previews m-1 rounded m-1 shadow">
+							<article class="article-previews my-2 m-md-1 rounded shadow">
 								<a href="article.php?article=<?php echo $article['id'];?>">
                   <img src="resources/img/articles/<?php echo $article['image']; ?>" alt="<?php echo $article['headline'] ?>" class="article-previews__img w-100 h-100 shadow rounded">
                 </a>
@@ -50,7 +51,7 @@
 				<?php }};?>
 			</div>
     </section>
-    <div class="col-8 col-sm-4 col-md-3 pl-0 mx-auto">
+    <div class="col-8 col-sm-6 col-md-3 pl-0 mx-auto">
       <?php include 'partials/main-ads.php'; ?>
     </div>
   </div>

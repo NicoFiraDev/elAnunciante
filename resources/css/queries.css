@@ -15,4 +15,12 @@
   .header__name--sm {
     font-size: 90%;
   }
+  
+  .article-previews {
+    flex-basis: 70%;
+  }
+}
+
+@media (max-width: 575px){
+
 }

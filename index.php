@@ -17,15 +17,15 @@
       				  if ($result = mysqli_query($link, $query)){
       					while ($article = mysqli_fetch_array($result)){?>
           <!-- article -->
-          <article class="carousel-item<?php if($counter <= 1){echo ' active'; } ?>">
-            <a href="article.php?article=<?php echo $article['id']; ?>">
-              <img src="./resources/img/articles/<?php echo $article['image'];?>" class="d-block w-100" alt="<?php echo $article['headline'];?>">
-              <div class="carousel-caption d-none d-md-block p-3 text-justify">
-                <h5 class="text-center"><?php echo $article['headline']; ?></h5>
-                <p><?php echo $article['preview']; ?></p>
-              </div>
-            </a>
+          <a class="carousel-item<?php if($counter <= 1){echo ' active'; } ?> d-block" href="article.php?article=<?php echo $article['id']; ?>">
+          <article>
+            <img src="./resources/img/articles/<?php echo $article['image'];?>" class="d-block w-100 h-100 carousel-img" alt="<?php echo $article['headline'];?>">
+            <div class="carousel-caption d-none d-md-block p-3 text-justify">
+              <h5 class="text-center"><?php echo $article['headline']; ?></h5>
+              <p><?php echo $article['preview']; ?></p>
+            </div>
           </article>
+          </a>
           <?php $counter++; }} ?>
         </div>
         <!-- Carousel controls -->
@@ -41,8 +41,8 @@
     </div>
   </div>
   <!-- Small articles row -->
-  <div class="row">
-    <section class="col-md-9 col-sm-8">
+  <div class="row flex-column-reverse flex-md-row">
+    <section class="col-md-9 col-sm-10 mx-sm-auto">
       <?php $query = 'SELECT * FROM `articles`  WHERE section != "Inmigración" ORDER BY `articles`.`id`  DESC ';
       if($result = mysqli_query($link, $query)){
           while ($article = mysqli_fetch_array($result)){ ?>
@@ -80,7 +80,7 @@
       </article>
       <?php }}; ?>
     </section>
-    <section class="col-8 col-sm-4 col-md-3 pl-0 mx-auto">
+    <section class="col-8 col-sm-6 col-md-3 pl-0 mx-auto">
       <?php include 'partials/main-ads.php'; ?>
     </section>
   </div>
